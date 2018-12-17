@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style type="text/css">
+div#square {
+    width: 100px;
+    height: 100px;
+    background: #009878;
+	position: absolute;
+	top:  50px;
+	left: 10px;
+	animation-name: example;
+    animation-duration: 4s;
+	transform: rotate(45deg);
+}
+
+@-webkit-keyframes example {
+    0%   {left:10px; top:50px;}
+    25%  {left:200px; top:50px;}
+    50%  {left:200px; top:200px;}
+    75%  {left:10px; top:200px;}
+    100% {left:10px; top:50px;}
+}
+
+</style>
+
+<script>
+function changeSize(elem , width1){
+	var demos = document.getElementById(elem);
+	demos.style.transition = "width 2.0s linear 0s";
+	demos.style.width = width1;
+}
+
+function changeColor(elem , color){
+	var clr = document.getElementById(elem);
+	clr.style.transition = "background 2.0s linear 0s";
+	clr.style.background = color;
+}
+
+function rotateAnim(elem){
+var mvt = document.getElementById(elem);
+mvt.style.transform = 'shape 2.0s linear 0s';
+mvt.style.shape = 'rotate(45deg)';
+}
+
+</script>
+
+</head>
+
+<body>
+
+<div id="square"> Content <br></div> <br>
+<button onClick="changeSize('square','300px');">expand</button>
+<button onClick="changeColor('square','#F0F');">Magenta</button>
+<button onClick="rotateAnim('square');">Rotate</button>
+
+</body>
+</html>
