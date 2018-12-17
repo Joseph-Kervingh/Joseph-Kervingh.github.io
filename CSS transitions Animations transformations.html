@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style type="text/css">
+div#square {
+    width: 100px;
+    height: 100px;
+    background: #009878;
+	position: absolute;
+	top:  50px;
+	left: 10px;	
+}
+
+</style>
+
+<script>
+function changeSize(elem , width1){
+	var demos = document.getElementById(elem);
+	demos.style.transition = "width 2.0s linear 0s";
+	demos.style.width = width1;
+}
+
+function changeColor(elem , color){
+	var clr = document.getElementById(elem);
+	clr.style.transition = "background 2.0s linear 0s";
+	clr.style.background = color;
+}
+
+</script>
+
+</head>
+
+<body>
+
+<div id="square"> Content <br></div> <br>
+<button onClick="changeSize('square','300px');">expand</button>
+<button onClick="changeColor('square','#F0F');">Magenta</button>
+
+</body>
+</html>
