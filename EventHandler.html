@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p> Click on the button</p> 
+<button onclick="document.getElementById('demo').innerHTML=Date()">The time is?</button> <br>
+<p id ="demo" ></p>
+
+<br>
+<p> Click on the button and the date and time will show on the button</p>
+<button onclick="this.innerHTML=Date()">The time is?</button> <br>
+
+<p>Hover the mouse over the button</p>
+<button onmouseover="this.innerHTML=Date()">The time is?</button><br>
+
+<p>Press the boutton and press a key for the date to display</p>
+<button onkeypress="this.innerHTML=Date()">The time is?</button>
+
+<button onload=this.innerHTML=Date()">The time is?</button>
+
+
+<button onload="document.getElementById('demo2').innerHTML= date()">Self load</button>
+
+
+<p id ="demo2" ></p>
+
+</body>
+</html>
