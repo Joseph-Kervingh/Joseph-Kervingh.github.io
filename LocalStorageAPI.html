@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>This is where we store the values 
+to be used on other pages.</h2>
+
+<h3>Click on the link below.</h3>
+
+
+<script>
+localStorage.setItem("product","mangoes");
+localStorage.setItem("destination","USA");
+
+var myArray ={ queue:
+	[{id: 0, make:"Mercedez"},
+    {id: 1, make: "Toyota"},
+    {id:2, make:"Honda"}]
+};
+
+localStorage.setItem("myArray", JSON.stringify(myArray));
+local storage.getItem("myArray", JSON.parse(myArray));
+
+
+</script>
+
+<a href="StorageAPItest.html">Go to the displaying page</a>
+
+
+</body>
+</html>
