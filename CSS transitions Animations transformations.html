@@ -27,6 +27,12 @@ function changeColor(elem , color){
 	clr.style.background = color;
 }
 
+function initialize(elem , color, width){
+	var clr = document.getElementById(elem);
+	clr.style.background = color;
+	clr.style.width = width;
+}
+
 </script>
 
 </head>
@@ -34,8 +40,8 @@ function changeColor(elem , color){
 <body>
 
 <div id="square"> Content <br></div> <br>
-<button onClick="changeSize('square','300px');">expand</button>
-<button onClick="changeColor('square','#F0F');">Magenta</button>
-
+<button onClick="changeSize('square','300px');">Expand</button>
+<button onClick="changeColor('square','#F0F');">Turn Violet</button>
+<button onClick="initialize('square','#009878','100px');">Reset</button>
 </body>
 </html>
