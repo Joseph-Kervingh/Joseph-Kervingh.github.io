@@ -10,7 +10,7 @@
   <br><br>
   
  <video id="video1" width="420">
-    <source src="File:///C:\Users\Namfield\Videos\TestVideo.mp4" type="video/mp4">
+		<source src="File://C:\Users\Namfield\Videos\I Nephi.mp4" type="video/mp4">
         Your browser does not support HTML5 video.
   </video>
 </div> 
@@ -18,9 +18,34 @@
 <br>
 
 <div style="text-align:center"> 
-  <iframe id="videoTest" width="420" height="420" src="https://www.youtube.com/embed/P_VRN7hcL_8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" ></iframe>
+  <iframe id="videoTest" width="420" height="420" src="https://www.youtube.com/embed/P_VRN7hcL_8" ></iframe>
+
 </div> 
 
+<div>
+<audio controls>
+<source src="File://C:\Users\Namfield\Music\2017MutualTheme.mp3" type="audio/mp3">
+<source src="File://C:\Users\Namfield\Music\2017MutualTheme.ogg" type="audio/ogg">
+</audio>
+<p>2017 Youth Mutual Theme, The Church of Jesus Christ of Latter-Day Saints</p>
+</div>
+
+<canvas id="myCanvas">
+
+<script>
+myCanvas.width = 300;
+myCanvas.height = 500;
+myCanvas.style = " border:1px solid black";
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.fillStyle = "#FF0000";
+ctx.fillRect(10, 20, 80, 80);
+var hrv = canvas.getContext("2d");
+hrv.fillStyle = "green";
+hrv.fillRect(220, 0, 80, 200);
+
+</script>
+</canvas>
 
 
 <script> 
