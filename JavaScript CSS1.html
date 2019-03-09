@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<body>
+
+<p id="p1">Hello World!</p>
+<p id="demo"> My name is Kerving!</p>
+
+		<script>
+
+//This block of code change the appearance of the text contain in the id
+//Pay attention that the different "ID" are not the same, pay attention to the change in 
+//color, fontfamily(these can be search in MS Word)
+
+function execution(){
+document.getElementById("p1").style.color = "yellow";
+document.getElementById("demo").style.fontFamily = "Times New Roman";
+document.getElementById("p1").style.fontSize = "larger";
+}
+
+//This block will add a button and when clicked upon will change
+//the font style of ID 'demo'
+
+</script>
+
+<button type="button" onclick="execution()">Press!</button>
+
+<button type="button"
+onclick="document.getElementById('demo').style.color = 'red'">
+Make change </button>
+
+<p>The paragraph above was changed by a script.</p>
+
+	</body>
+</html>
