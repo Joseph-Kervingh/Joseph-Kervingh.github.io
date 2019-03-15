@@ -23,6 +23,12 @@ function loadXMLDoc() {
   xhttp.send();
   
 }
+  
+  //This variable data receives from AJAX then convert text into JS.
+var data = JSON.parse(xhttp);
+data.birth = new Date(data.birth);
+document.getElementById("demo").innerHTML = 
+data.name + ", was born on " + data.birth; 
 </script>
 
 </body>
