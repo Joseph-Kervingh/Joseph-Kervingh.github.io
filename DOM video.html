@@ -1,0 +1,53 @@
+
+
+<!DOCTYPE html>
+<html> // This is the root element
+
+<head>
+<title> </This is a DOM demonstration> //the afore mentionned
+text is a child node to title.
+ </title>
+
+</head>
+
+<style type="text/css"> // Element style
+div#square {
+    width: 100px;
+    height: 100px;
+    background: #009878;
+	position: absolute;
+	top:  400px;
+	left: 10px;
+}
+
+</style>
+
+<script>
+function changeSize(elem , width1){
+	var demos = document.getElementById(elem);
+	demos.style.transition = "width 2.0s linear 0s";
+	demos.style.width = width1;
+}
+</script>
+
+
+//The element "body" is sibling node to script, style, head.
+<body onload="this.innerHTML=changeSize('square','300px')">
+	<div id="square"> This content is expending when the page loads</div>
+
+	<p> Click on the button</p> //The element p is child node to body
+	<button onclick="document.getElementById('demo').innerHTML=Date()">The time is?</button> <br>
+	<p id ="demo" ></p>
+
+	<br>
+	<p> Click on the button and the date and time will show on the button</p>
+	<button onclick="this.innerHTML=Date()">The time is?</button> <br>
+
+	<p>Hover the mouse over the button</p>
+	<button onmouseover="this.innerHTML=Date()">The time is?</button><br>
+
+	<p>Press the boutton and press a key for the date to display</p>
+	<button onkeypress="this.innerHTML=Date()">The time is?</button>
+</body>
+
+</html>
