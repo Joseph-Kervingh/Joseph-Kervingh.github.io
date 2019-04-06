@@ -47,21 +47,21 @@ main {
   border: 1px solid purple; 
   background-color: gray; 
   text-align:center;
-  font-size: 12px
-  font-color:black;
+  font-size: 12px;
+  font-color: black;
 }
 
 .group2 {
-    text-align: center;
-    display: inline-block;
-    width:100px;
-    height:100px;
-    background-color: #ccccff;
-    margin: 4px;
-    border-radius: 10%;
-    transition: all 1.5s;
-  text-align:center;
-  font-size: 12px
+   display: inline-block;
+	width:100px;
+   height:100px;
+   text-align: center;  
+	margin: 4px;
+   background-color: #ccccff;
+	text-align:center;
+	font-size: 12px;
+   border-radius: 10%;
+   transition: all 1.5s; 
 }
 
 .container {
@@ -71,12 +71,12 @@ main {
 
 .container1 {
  margin: auto;
-  width:95%; 
+  width:50%; 
 }
 
 .container2 {
  margin: auto;
-  width:95%; 
+  width:50%; 
 }
 
 
