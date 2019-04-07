@@ -88,6 +88,7 @@ img {
    transform: rotate(360deg);
    transition: all 1.5s;
    background-color: #ccffee;
+   
 }
 
 .group2:hover {
