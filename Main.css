@@ -33,8 +33,17 @@ main {
    opacity: 0.7;
    font-size: 20px;
    font-color:black;
+   animation-name: top;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
 }
 
+@keyframes top {
+  0%   {background-color: #ffff99;}
+  25%  {background-color: #ffff66;}
+  50%  {background-color: #ffd9b3;}
+  100% {background-color: #ffe6cc;}
+}
 
 .group1 {
   display: inline-block;
