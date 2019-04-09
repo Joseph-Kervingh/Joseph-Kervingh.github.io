@@ -26,7 +26,22 @@
        
         <p>At this time of conference, I invite you to get acquainted with the brethren.<br> Hover the mouse upon them to get a closer look. <br> Click on their photograph to view their Bio.</p>
         <h2>Enjoy this April 2019 Conference!</h2>
-      </main> 
+	     
+	     
+	 <section id ="topbox">
+         	<form>
+           		<p>Name: <input type="text" id="Name"></p>
+           		<p>Location:<input type="text" id="Location"></p>
+           		<p> <input type="button" id="button" value="save"></p>
+         	</form>      
+         </section>
+       
+       	 <section id="bottom">   
+       		<h2>Enjoy this April 2019 Conference!</h2>
+          </section>
+	     
+     </main>      
+	      
       
      <div class="container">
         <div class="group1" id="prOaks">
@@ -101,21 +116,41 @@
        </div>
    
              
-      </body>
-   
-	<footer>	
-            <h2>Time remaining before next session</h2>
-            <p id="demo"></p>
-           
-             Powered by Joseph
-    	</footer>
+       <footer>	            
+       		 <h2>Time remaining before next session</h2>
+                  
+   	    <font color="black"> 
+   		 <H1 id="demo" ></h1>    
+    	    </font>
+               
+	</footer>
 		
-		<Script>
-			var date2 = new Date();
-			var date1 = new Date(2019, 10, 5, 12, 0, 0);
-			var timeDiff = Math.abs(date2.getTime() - date1.getTime());
-			var final = Math.round(timeDiff/(1000*60*60*24))
-		document.getElementById("demo").innerHTML ="There remain "+ final+" days before next General Conference";
+	<Script>
+		var date2 = new Date();
+		var date1 = new Date(2019, 10, 5, 12, 0, 0);
+	var timeDiff = Math.abs(date2.getTime() - date1.getTime());
+	var final = Math.round(timeDiff/(1000*60*60*24))
+
+	document.getElementById("demo").innerHTML ="There remains "+ final+" days before next General Conference";
+
+	function store(){
+  	var button =document.getElementById("button");
+  	button.addEventListener("click", keep, false);
+	} 
+ 
+	function keep(){
+  	var Fame = document.getElementById("Name").value;
+  	var Focation = document.getElementById("Location").value;
+  	sessionStorage.setItem('name', Fame);
+ 	sessionStorage.setItem('location', Focation);
+	}
+	window.addEventListener("load", store, false);
+	sessionStorage.getItem("name");
+	sessionStorage.getItem("location");
+
+	document.write(sessionStorage.name+" from ");
+	document.write(sessionStorage.location+", you visited the site earlier."); 
+
 			
-		</script>
-	</html>
+	</script>
+</html>
