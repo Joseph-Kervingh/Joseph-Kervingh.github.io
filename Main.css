@@ -26,6 +26,16 @@ nav{
    opacity: 0.5;
 }
 
+#topbox{
+  top: -90px;
+  height: 111px;
+  position: relative;
+ float:right;
+ background-color: #fae6ff;
+  padding: 20px;
+  border:3px solid black;
+}
+
 main {
    background: #ffffb3;
    width: 100%;
@@ -110,7 +120,10 @@ img {
   
   
   footer{
-    
+      background: #ffffb3;
+      width: 100%;
+      height:100%;
+      opacity: 0.5;
     
   }
 
