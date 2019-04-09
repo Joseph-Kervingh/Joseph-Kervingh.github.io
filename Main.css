@@ -26,12 +26,12 @@ nav{
    opacity: 0.5;
 }
 
-.topbox{
+topbox{
   top: -90px;
   height: 111px;
   position: relative;
- float:right;
- background-color: #fae6ff;
+  float:right;
+  background-color: #fae6ff;
   padding: 20px;
   border:3px solid black;
 }
