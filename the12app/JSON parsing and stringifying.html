@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Convert a string into a date object, to find the day I was born.</h2>
+
+<p id="demo"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+
+<script>
+var info = '{"name":"Kerving", "birth":"31 Jan 1980","city":"Port-au-Prince, Haiti"}';
+
+//This variable data receives the convert text into JSON format.
+var data = JSON.parse(info);
+data.birth = new Date(data.birth);
+document.getElementById("demo").innerHTML = 
+data.name + ", was born on " + data.birth; 
+
+//Since functions are not allowed in JSON,
+//we need to write them as string and convert them back later
+var text = '{"name":"John", "age":"function() {return 30;}", "city":"Port-au-Prince"}';
+var obj = JSON.parse(text);
+
+//This converts the string into function
+obj.age = eval("(" + obj.age + ")");
+document.getElementById("demo2").innerHTML = 
+obj.name + " is " + obj.age();
+
+//This will convert back the JSON into string
+var information= { name: "Ben", age: 25, city: "Stamford, CT" };
+var conv = JSON.stringify(information);
+document.getElementById("demo3").innerHTML = conv;
+ 
+</script>
+
+</body>
+</html>

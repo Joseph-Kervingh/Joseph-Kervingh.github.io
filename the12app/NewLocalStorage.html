@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<body>
+
+		<h2>Please enter your name and the site will recognize you after you refreshed
+		the page. There will be a mention indicating that you have visited the site.</h2>
+		
+		<section id ="topbox">
+			<form>
+				<p>Name: <input type="text" id="Name"></p>
+				<p>Location:<input type="text" id="Location"></p>
+				<p> <input type="button" id="button" value="save"></p>
+			</form>      
+         </section>
+       
+       <section id="bottom">
+
+		<script>
+		
+			function store(){
+				var button =document.getElementById("button");
+				button.addEventListener("click", keep, false);
+			} 
+ 
+			function keep(){
+				var Fame = document.getElementById("Name").value;
+				var Focation = document.getElementById("Location").value;
+				sessionStorage.setItem('name', Fame);
+				sessionStorage.setItem('location', Focation);
+			}
+				window.addEventListener("load", store, false);
+				sessionStorage.getItem("name");
+				sessionStorage.getItem("location");
+
+				document.write(sessionStorage.name+" from ");
+				document.write(sessionStorage.location+", you visited the site earlier."); 
+
+
+		</script>
+		
+		<style>
+		#topbox{
+			top: px;
+			height: 111px;
+			position: relative;
+			float:right;
+			background-color: #fae6ff;
+			padding: 20px;
+			border:3px solid black;
+				}
+		</style>
+		
+
+
+	</body>
+</html>

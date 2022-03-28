@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style type="text/css">
+div#square {
+    width: 100px;
+    height: 100px;
+    background: #009878;
+	position: absolute;
+	top:  50px;
+	left: 10px;	
+}
+
+</style>
+
+<script>
+function changeSize(elem , width1){
+	var demos = document.getElementById(elem);
+	demos.style.transition = "width 2.0s linear 0s";
+	demos.style.width = width1;
+}
+
+function changeColor(elem , color){
+	var clr = document.getElementById(elem);
+	clr.style.transition = "background 2.0s linear 0s";
+	clr.style.background = color;
+}
+
+function initialize(elem , color, width){
+	var clr = document.getElementById(elem);
+	clr.style.background = color;
+	clr.style.width = width;
+}
+
+</script>
+
+</head>
+
+<body>
+
+<div id="square"> Content <br></div> <br>
+<button onClick="changeSize('square','300px');">Expand</button>
+<button onClick="changeColor('square','#F0F');">Turn Violet</button>
+<button onClick="initialize('square','#009878','100px');">Reset</button>
+</body>
+</html>
